@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  vestacp-docker:
+    build: ./!root
+    volumes:
+      - "./backup:/backup"
+      - "./vesta:/vesta"
+      - "./home:/home"
+    ports:
+#      - "22:22"
+#      - "21:21"
+      - "80:80"
+#      - "443:443"
+      - "8083:8083"
+#      - "3306:3306"
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 20000
+        hard: 40000
+    sysctls:
+      net.core.somaxconn: '511'
+    restart: always
+
+#   docker exec $CONTAINER_ID /usr/local/vesta/bin/v-change-user-password admin YOURNEWPASSWORD
+#   docker exec $CONTAINER_ID bash
+#   docker-compose build
+#   docker-compose up
