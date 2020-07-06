@@ -7,6 +7,7 @@ home_dir="$4"
 docroot="$5"
 php_version="5.6"
 
+
 fpm_conf="
 [$domain]
 listen = /var/run/vesta-php-fpm-$domain.sock
