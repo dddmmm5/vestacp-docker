@@ -644,7 +644,7 @@ RUN cd /tmp \
 
 # vsftpd
     && rm -rf /etc/vsftpd.conf \
-    && cp /vesta-start/local/vesta/install/ubuntu/16.04/vsftpd/vsftpd.conf /etc/vsftpd.conf \
+    && cp /vesta-start/local/vesta/install/ubuntu/18.10/vsftpd/vsftpd.conf /etc/vsftpd.conf \
 
 # finish cleaning up
     && rm -rf /backup/.etc \
